@@ -6,7 +6,7 @@ Upskill is an interactive, responsive web-based e-learning platform designed to 
 
 - **Responsive Design**: Optimized for seamless viewing and interaction across all screen sizes using a modern CSS Grid layout.
 - **Interactive User Interface**: Smooth transitions, dynamic states (hover/active), and clean, minimalist styling.
-- **Login Authentication Simulation**: Persistent Login/Signup system using client-side `localStorage`. Users must sign up before accessing course content.
+- **Login Authentication Simulation**: Persistent Login/Signup system using client-side `localStorage`. Users must sign up before accessing course content, and new account creation enforces strict "Password" and "Confirm Password" matching validation.
 - **Course Catalog**: A dedicated section displaying popular courses with ratings, prices, and detailed curriculum information via dynamic course pages.
 - **Enrollment System Simulation**: Mock course enrollment feedback mechanisms using JavaScript alerts.
 - **Multi-Page Navigation**: Separate pages for Home, About, Courses, Course Details, and Contact, all linked logically.
@@ -15,7 +15,7 @@ Upskill is an interactive, responsive web-based e-learning platform designed to 
 
 - **HTML5**: For structural semantics, page layout, and crisp, indentation-formatted code.
 - **CSS3**: Vanilla CSS for styling, custom CSS Grid layouts, and modern visual aesthetics (no external frameworks).
-- **JavaScript**: Vanilla JS for interactive elements such as login messaging, authentication checks, and enrollment notifications.
+- **JavaScript**: JavaScript for interactive elements such as login messaging, authentication checks, and enrollment notifications.
 - **XML & XSD**: For structured data storage and schema validation.
 
 ## Folder Structure

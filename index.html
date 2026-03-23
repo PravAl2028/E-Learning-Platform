@@ -197,11 +197,11 @@
     </footer>
     <script>
       function toggleAuth(type) {
-        const loginFields = document.getElementById("login-fields");
-        const signupFields = document.getElementById("signup-fields");
-        const loginTab = document.getElementById("login-tab");
-        const signupTab = document.getElementById("signup-tab");
-        const verifyMsg = document.getElementById("verify-msg");
+        var loginFields = document.getElementById("login-fields");
+        var signupFields = document.getElementById("signup-fields");
+        var loginTab = document.getElementById("login-tab");
+        var signupTab = document.getElementById("signup-tab");
+        var verifyMsg = document.getElementById("verify-msg");
         verifyMsg.style.display = "none";
         if (type === "login") {
           loginFields.style.display = "block";
@@ -216,17 +216,30 @@
         }
       }
       function handleVerify(type) {
-        const verifyMsg = document.getElementById("verify-msg");
-        const btn = event.target;
-        const email = document.getElementById(type + "-email").value;
-        const password = document.getElementById(type + "-password").value;
-        if (!email || !password) {
-          alert("Please fill all fields");
-          return;
+        var verifyMsg = document.getElementById("verify-msg");
+        var btn = event.target || window.event.srcElement;
+        var email = document.getElementById(type + "-email").value;
+        var password = document.getElementById(type + "-password").value;
+        
+        if (type === "signup") {
+          var confirm = document.getElementById("signup-confirm").value;
+          if (!email || !password || !confirm) {
+            alert("Please fill all fields");
+            return;
+          }
+          if (password !== confirm) {
+            alert("Passwords do not match!");
+            return;
+          }
+        } else {
+          if (!email || !password) {
+            alert("Please fill all fields");
+            return;
+          }
         }
         btn.innerHTML = "Verifying...";
         btn.disabled = true;
-        setTimeout(() => {
+        setTimeout(function () {
           if (type === "signup") {
             localStorage.setItem("user_" + email, password);
             verifyMsg.style.display = "block";
@@ -234,7 +247,7 @@
               '<i class="fas fa-check-circle"></i> Account Created! You can now Login.';
             btn.innerHTML = "Sign Up Successful";
           } else {
-            const savedPass = localStorage.getItem("user_" + email);
+            var savedPass = localStorage.getItem("user_" + email);
             if (savedPass && savedPass === password) {
               localStorage.setItem("isLoggedIn", "true");
               verifyMsg.style.display = "block";
@@ -243,14 +256,14 @@
               btn.innerHTML = "Login Successful";
             } else {
               alert(
-                "Account not found or invalid credentials. Please Sign Up first.",
+                "Account not found or invalid credentials. Please Sign Up first."
               );
               btn.innerHTML = "Verify & Login";
               btn.disabled = false;
               return;
             }
           }
-          setTimeout(() => {
+          setTimeout(function () {
             btn.innerHTML =
               type === "login" ? "Verify & Login" : "Verify & Sign Up";
             btn.disabled = false;

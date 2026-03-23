@@ -94,7 +94,7 @@
       </div>
     </footer>
     <script>
-      const coursesData = {
+      var coursesData = {
         react: {
           title: "React Developer Bootcamp",
           price: "₹799",
@@ -132,10 +132,10 @@
           desc: "Master SEO, SEM, social media marketing, and content strategy for business growth.",
         },
       };
-      const params = new URLSearchParams(window.location.search);
-      const courseId = params.get("id");
+      var params = new URLSearchParams(window.location.search);
+      var courseId = params.get("id");
       if (courseId && coursesData[courseId]) {
-        const course = coursesData[courseId];
+        var course = coursesData[courseId];
         document.getElementById("course-title").innerText = course.title;
         document.getElementById("course-price").innerText = course.price;
         document.getElementById("course-duration").innerText = course.duration;
