@@ -1,95 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UPSKILL | Course Details</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="../styling/course-details.css"> 
-</head> 
-<body> 
-<div class="navbar"> 
-<div class="icon"> 
-<h2 class="logo">Upskill</h2> 
-</div> 
-<div class="menu"> 
-<ul> 
-<li><a href="../index.html">HOME</a></li> 
-<li><a href="about.html">ABOUT</a></li> 
-<li><a href="courses.html">COURSES</a></li> 
-<li><a href="contact.html">CONTACT</a></li> 
-</ul>
-</div> 
-<div class="search"> 
-<input class="srch" type="search" placeholder="Search courses..."> 
-<button class="btn">Search</button>
-</div> 
-</div> 
-<section class="section">
-<div id="course-content">
-<h1 class="heading" id="course-title">Course Title</h1>
-<div class="detail-container">
-<div class="detail-main">
-<h3>Course Description</h3>
-<p id="course-desc">Detailed explanation of what the course covers, its value, and learning outcomes.</p>
-<h3>Instructor Details</h3>
-<p id="instructor-info">Expert professional from Upskill Tech with years of experience in the industry.</p>
-<h3>Course Curriculum</h3>
-<div class="curriculum-list" id="curriculum">
-<div class="curriculum-item"><span>Module 1: Introduction</span><span>15 mins</span></div>
-<div class="curriculum-item"><span>Module 2: Core Concepts</span><span>45 mins</span></div>
-<div class="curriculum-item"><span>Module 3: Advanced Topics</span><span>60 mins</span></div>
-<div class="curriculum-item"><span>Module 4: Final Project</span><span>120 mins</span></div>
-</div>
-</div>
-<div class="detail-sidebar">
-<h3>Course Info</h3>
-<div class="price-box" id="course-price">₹0</div>
-<p><strong>Duration:</strong> <span id="course-duration">12 Weeks</span></p>
-<p style="margin-bottom: 25px;"><strong>Level:</strong> Intermediate</p>
-<button class="enroll-btn" onclick="enroll()">Enroll Now</button>
-</div>
-</div>
-</div>
-</section>
-<footer class="footer"> 
-<div class="footer-container"> 
-<div class="footer-about"> 
-<h3>Upskill</h3> 
-<p>Upskill is an e-learning platform designed to help students enhance their skills through high-quality online courses.</p> 
-</div> 
-<div class="footer-support"> 
-<h3>Support</h3> 
-<p>Email: support@upskill.com</p> 
-<p>Phone: +91 98765 43210</p> 
-</div> 
-</div> 
-<div class="footer-copy"> 
-<p>&copy; 2026 Upskill. All Rights Reserved.</p> 
-</div> 
-</footer>
-<script>
-const coursesData={
-react:{title:"React Developer Bootcamp",price:"₹799",duration:"8 Weeks",desc:"Master React.js from basics to advanced hooks and state management with real-world projects."},
-python:{title:"Python for Data Science",price:"₹999",duration:"10 Weeks",desc:"Learn Python programming for data analysis, visualization, and basic machine learning concepts."},
-uiux:{title:"UI/UX Design Masterclass",price:"₹699",duration:"6 Weeks",desc:"Modern design principles, user research, wireframing, and high-fidelity prototyping using Figma."},
-ai:{title:"Artificial Intelligence Mastery",price:"₹1,200",duration:"12 Weeks",desc:"Deep dive into Neural Networks, Machine Learning algorithms, and AI implementation."},
-cyber:{title:"Cyber Security Essentials",price:"₹899",duration:"8 Weeks",desc:"Essentials of network security, ethical hacking, and protecting systems from vulnerabilities."},
-marketing:{title:"Digital Marketing Bootcamp",price:"₹599",duration:"6 Weeks",desc:"Master SEO, SEM, social media marketing, and content strategy for business growth."}};
-const params=new URLSearchParams(window.location.search);
-const courseId=params.get('id');
-if(courseId&&coursesData[courseId]){
-const course=coursesData[courseId];
-document.getElementById('course-title').innerText=course.title;
-document.getElementById('course-price').innerText=course.price;
-document.getElementById('course-duration').innerText=course.duration;
-document.getElementById('course-desc').innerText=course.desc;
-}else{
-document.getElementById('course-content').innerHTML="<h2>Course not found</h2><a href='courses.html' style='color:#ff7200'>Back to Courses</a>";
-}
-function enroll(){
-alert('Enrolled successfully! Link sent to your email.');
-}
-</script>
-</body> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPSKILL | Course Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styling/course-details.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">Upskill</h2>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <input class="srch" type="search" placeholder="Search courses..." />
+        <button class="btn">Search</button>
+      </div>
+    </div>
+    <section class="section">
+      <div id="course-content">
+        <h1 class="heading" id="course-title">Course Title</h1>
+        <div class="detail-container">
+          <div class="detail-main">
+            <h3>Course Description</h3>
+            <p id="course-desc">
+              Detailed explanation of what the course covers, its value, and
+              learning outcomes.
+            </p>
+            <h3>Instructor Details</h3>
+            <p id="instructor-info">
+              Expert professional from Upskill Tech with years of experience in
+              the industry.
+            </p>
+            <h3>Course Curriculum</h3>
+            <div class="curriculum-list" id="curriculum">
+              <div class="curriculum-item">
+                <span>Module 1: Introduction</span><span>15 mins</span>
+              </div>
+              <div class="curriculum-item">
+                <span>Module 2: Core Concepts</span><span>45 mins</span>
+              </div>
+              <div class="curriculum-item">
+                <span>Module 3: Advanced Topics</span><span>60 mins</span>
+              </div>
+              <div class="curriculum-item">
+                <span>Module 4: Final Project</span><span>120 mins</span>
+              </div>
+            </div>
+          </div>
+          <div class="detail-sidebar">
+            <h3>Course Info</h3>
+            <div class="price-box" id="course-price">₹0</div>
+            <p>
+              <strong>Duration:</strong>
+              <span id="course-duration">12 Weeks</span>
+            </p>
+            <p style="margin-bottom: 25px">
+              <strong>Level:</strong> Intermediate
+            </p>
+            <button class="enroll-btn" onclick="enroll()">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Upskill</h3>
+          <p>
+            Upskill is an e-learning platform designed to help students enhance
+            their skills through high-quality online courses.
+          </p>
+        </div>
+        <div class="footer-support">
+          <h3>Support</h3>
+          <p>Email: support@upskill.com</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Upskill. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const coursesData = {
+        react: {
+          title: "React Developer Bootcamp",
+          price: "₹799",
+          duration: "8 Weeks",
+          desc: "Master React.js from basics to advanced hooks and state management with real-world projects.",
+        },
+        python: {
+          title: "Python for Data Science",
+          price: "₹999",
+          duration: "10 Weeks",
+          desc: "Learn Python programming for data analysis, visualization, and basic machine learning concepts.",
+        },
+        uiux: {
+          title: "UI/UX Design Masterclass",
+          price: "₹699",
+          duration: "6 Weeks",
+          desc: "Modern design principles, user research, wireframing, and high-fidelity prototyping using Figma.",
+        },
+        ai: {
+          title: "Artificial Intelligence Mastery",
+          price: "₹1,200",
+          duration: "12 Weeks",
+          desc: "Deep dive into Neural Networks, Machine Learning algorithms, and AI implementation.",
+        },
+        cyber: {
+          title: "Cyber Security Essentials",
+          price: "₹899",
+          duration: "8 Weeks",
+          desc: "Essentials of network security, ethical hacking, and protecting systems from vulnerabilities.",
+        },
+        marketing: {
+          title: "Digital Marketing Bootcamp",
+          price: "₹599",
+          duration: "6 Weeks",
+          desc: "Master SEO, SEM, social media marketing, and content strategy for business growth.",
+        },
+      };
+      const params = new URLSearchParams(window.location.search);
+      const courseId = params.get("id");
+      if (courseId && coursesData[courseId]) {
+        const course = coursesData[courseId];
+        document.getElementById("course-title").innerText = course.title;
+        document.getElementById("course-price").innerText = course.price;
+        document.getElementById("course-duration").innerText = course.duration;
+        document.getElementById("course-desc").innerText = course.desc;
+      } else {
+        document.getElementById("course-content").innerHTML =
+          "<h2>Course not found</h2><a href='courses.html' style='color:#ff7200'>Back to Courses</a>";
+      }
+      function enroll() {
+        alert("Enrolled successfully! Link sent to your email.");
+      }
+    </script>
+  </body>
 </html>
