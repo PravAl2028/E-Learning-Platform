@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+ul{
+    list-style: none;
+}
+.main{
+    width: 100%;
+}
+.navbar{
+    height: 75px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 1px solid #222;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff7200;
+}
+.menu{
+    justify-self: center;
+}
+.menu ul{
+    display: flex;
+    gap: 20px;
+}
+.menu ul li a{
+    font-size: 13px;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 1px;
+}
+.menu ul li a:hover{
+    color: #ff7200;
+}
+.search{
+    display: flex;
+    gap: 5px;
+    justify-self: end;
+}
+.search input{
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 13px;
+}
+.search button{
+    background: #ff7200;
+    border: none;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.content{
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.content h1 span{
+    color: #ff7200;
+}
+.par{
+    color: #ccc;
+    max-width: 500px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+.cn{
+    background: #ff7200;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 15px;
+}
+.form{
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    border: 1px solid #222;
+}
+.form h2{
+    text-align: center;
+    color: #ff7200;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+.form input{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+.btnn{
+    width: 100%;
+    background: #ff7200;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.liw{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 13px;
+    color: #666;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+.icons a:hover{
+    color: #ff7200;
+}
+.heading{
+    padding: 50px 8% 20px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ff7200;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 8% 80px;
+}
+.course{
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.course:hover{
+    border-color: #ff7200;
+}
+.course-content{
+    padding: 15px;
+}
+.course-title{
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.source{
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.rating{
+    color: #f5c518;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.raters{
+    color: #666;
+    margin-left: 5px;
+    font-size: 11px;
+}
+.price{
+    font-weight: 800;
+    color: #ff7200;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+.old-price{
+    color: #444;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+.extra-info{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.premium,
+.bestseller{
+    font-size: 10px;
+    padding: 3px 8px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+}
+.premium{
+    background: #333;
+    color: #ff7200;
+}
+.bestseller{
+    background: #ff720080;
+    color: #fff;
+}
+.form-tabs{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.form-tab{
+    cursor: pointer;
+    color: #888;
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+.form-tab.active{
+    color: #ff7200;
+    border-bottom: 2px solid #ff7200;
+}
+#verify-msg{
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border-radius: 5px;
+    font-size: 13px;
+}
+footer{
+    padding: 60px 8% 20px;
+    border-top: 1px solid #222;
+    background: #000;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-about,
+.footer-support{
+    flex: 1;
+}
+.footer-about h3,
+.footer-support h3{
+    color: #ff7200;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.footer-about p,
+.footer-support p{
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+.footer-copy{
+    padding-top: 20px;
+    border-top: 1px solid #111;
+    text-align: center;
+    color: #444;
+    font-size: 12px;
+}
+@media (max-width: 600px){
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 1000px){
+    .content{
+        flex-direction: column;
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    .content h1{
+        font-size: 2.8rem;
+    }
+    .par{
+        margin: 20px auto;
+    }
+    .form{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 768px){
+    .navbar{
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+    .menu{
+        justify-self: center;
+    }
+    .search{
+        justify-self: center;
+    }
+}
+@media (max-width: 480px){
+    .menu ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPSKILL | Courses</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="../styling/courses.css"> 
+</head> 
+<body> 
+<div class="navbar"> 
+<div class="icon"> 
+<h2 class="logo">Upskill</h2> 
+</div> 
+<div class="menu"> 
+<ul> 
+<li><a href="../index.html">HOME</a></li> 
+<li><a href="about.html">ABOUT</a></li> 
+<li><a href="courses.html" class="active">COURSES</a></li> 
+<li><a href="contact.html">CONTACT</a></li> 
+</ul>
+</div> 
+<div class="search"> 
+<input class="srch" type="search" placeholder="Search courses..."> 
+<button class="btn">Search</button>
+</div> 
+</div> 
+<section class="section">
+<div class="heading">Our Featured Courses</div>
+<div class="courses">
+<div class="course" onclick="checkAuth('react')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">⚛️</span>
+<p class="course-title">React Developer Bootcamp</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.9 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="price">₹799</p>
+<div class="extra-info">
+<button class="premium">Premium</button>
+</div>
+</div>
+</div>
+<div class="course" onclick="checkAuth('python')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">🐍</span>
+<p class="course-title">Python for Data Science</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.8 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<p class="price">₹999</p>
+<div class="extra-info">
+<button class="premium">Premium</button>
+</div>
+</div>
+</div>
+<div class="course" onclick="checkAuth('uiux')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">🎨</span>
+<p class="course-title">UI/UX Design Masterclass</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.7 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<p class="price">₹699</p>
+<div class="extra-info">
+<button class="premium">Premium</button>
+</div>
+</div>
+</div>
+<div class="course" onclick="checkAuth('ai')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">🤖</span>
+<p class="course-title">Artificial Intelligence Mastery</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.9 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="price">₹1,200</p>
+<div class="extra-info">
+<button class="premium">Premium</button>
+</div>
+</div>
+</div>
+<div class="course" onclick="checkAuth('cyber')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">🛡️</span>
+<p class="course-title">Cyber Security Essentials</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.8 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<p class="price">₹899</p>
+<div class="extra-info">
+<button class="premium">Premium</button>
+</div>
+</div>
+</div>
+<div class="course" onclick="checkAuth('marketing')">
+<div class="course-content">
+<span style="font-size: 3rem; display: block; text-align: center; padding: 20px;">📈</span>
+<p class="course-title">Digital Marketing Bootcamp</p>
+<p class="source">Upskill Technologies</p>
+<div class="rating">
+4.7 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+</div>
+<p class="price">₹599</p>
+<div class="extra-info">
+<button class="bestseller">Bestseller</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer"> 
+<div class="footer-container"> 
+<div class="footer-about"> 
+<h3>Upskill</h3> 
+<p>Upskill is an e-learning platform designed to help students enhance their skills through high-quality online courses.</p> 
+</div> 
+<div class="footer-support"> 
+<h3>Support</h3> 
+<p>Email: support@upskill.com</p> 
+<p>Phone: +91 98765 43210</p> 
+</div> 
+</div> 
+<div class="footer-copy"> 
+<p>&copy; 2026 Upskill. All Rights Reserved.</p> 
+</div> 
+</footer>
+<script>
+function checkAuth(courseId){
+if(localStorage.getItem('isLoggedIn')==='true'){
+window.location.href='course-details.html?id='+courseId;
+}else{
+alert('Please Login first to view course details.');
+window.location.href='../index.html#auth-form';
+}}
+</script>
+</body> 
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<websiteData>
+    <courses>
+        <course id="react">
+            <title>React Developer Bootcamp</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>799</price>
+            <duration>8 Weeks</duration>
+            <description>Master React.js from basics to advanced hooks and state management.</description>
+        </course>
+        <course id="python">
+            <title>Python for Data Science</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>999</price>
+            <duration>10 Weeks</duration>
+            <description>Learn Python programming for data analysis and visualization.</description>
+        </course>
+        <course id="uiux">
+            <title>UI/UX Design Masterclass</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>699</price>
+            <duration>6 Weeks</duration>
+            <description>Modern design principles, user research, and prototyping using Figma.</description>
+        </course>
+        <course id="ai">
+            <title>Artificial Intelligence Mastery</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>1200</price>
+            <duration>12 Weeks</duration>
+            <description>Deep dive into Neural Networks and Machine Learning algorithms.</description>
+        </course>
+        <course id="cyber">
+            <title>Cyber Security Essentials</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>899</price>
+            <duration>8 Weeks</duration>
+            <description>Essentials of network security and protecting systems from vulnerabilities.</description>
+        </course>
+        <course id="marketing">
+            <title>Digital Marketing Bootcamp</title>
+            <instructor>Upskill Tech Expert</instructor>
+            <price>599</price>
+            <duration>6 Weeks</duration>
+            <description>Master SEO, SEM, and social media marketing strategies.</description>
+        </course>
+    </courses>
+    <services>
+        <service>
+            <name>Online Training</name>
+            <description>Interactive live sessions with industry experts.</description>
+        </service>
+        <service>
+            <name>Certification</name>
+            <description>Get industry-recognized certificates upon completion.</description>
+        </service>
+    </services>
+</websiteData>
